@@ -73,7 +73,8 @@ double ComputeIntegral (){
             for (auto i = limits.left; i < limits.right; i += step_for_task*accuracy_parameters.step){
                 double left_p = i;
                 double right_p = left_p + accuracy_parameters.step * step_for_task;
-                tasks[index++] = std::async(std::launch::async, [left_p, right_p,                                           accuracy_parameters](){
+                tasks[index++] = std::async(std::launch::async, [left_p, right_p,
+                                                                 accuracy_parameters](){
                     double res = 0;
                     for (auto k = left_p; k < right_p; k += accuracy_parameters.step){
                         res += accuracy_parameters.step*Function(k + accuracy_parameters.step/2);

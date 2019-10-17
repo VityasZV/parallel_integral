@@ -6,10 +6,11 @@
 //  Copyright © 2019 Виктор Задябин. All rights reserved.
 //
 
+#include "parallel_integral/parallel_integral.hpp"
+
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::cout << parallel_integral::ComputeIntegral() << std::endl;
     return 0;
 }
